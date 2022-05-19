@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<HBox alignment="BOTTOM_LEFT" cache="true" cacheHint="QUALITY" depthTest="ENABLE" focusTraversable="true" maxWidth="1920.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="900.0" prefWidth="1920.0" spacing="20.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tommaso.planckbet.controller.Controller">
+    <children>
+        <VBox fx:id="prova" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" minHeight="300.0" prefHeight="1080.0" prefWidth="459.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 0; ">
+            <padding>
+                <Insets top="50.0" />
+            </padding>
+            <children>
+                <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="201.0" prefWidth="438.0" style="-fx-background-color: #D8DEE9; -fx-background-radius: 50px;" VBox.vgrow="NEVER">
+                    <children>
+                        <ImageView fx:id="immagineCasa" fitHeight="140.0" fitWidth="120.0">
+                            <Image fx:id="imgCasa" url="@../model/image/juventus.png" />
+                        </ImageView>
+                        <Label fx:id="risultato" alignment="CENTER" contentDisplay="CENTER" ellipsisString="-" prefHeight="166.0" prefWidth="139.0" text="0 - 0" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS">
+                            <font>
+                                <Font name="Berlin Sans FB Bold" size="38.0" />
+                            </font>
+                        </Label>
+                        <ImageView fx:id="immagineOspiti" fitHeight="140.0" fitWidth="132.0">
+                            <Image url="@../model/image/inter.png" />
+                        </ImageView>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="25.0" left="10.0" right="10.0" />
+                    </VBox.margin>
+                </HBox>
+                <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+                    <children>
+                        <Label text="Statistiche :">
+                            <font>
+                                <Font name="Eras Bold ITC" size="22.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="17.0" prefWidth="495.0" />
+                        <Label fx:id="vittorieCasa" prefHeight="17.0" prefWidth="499.0" text="Vittorie Casa   :   ">
+                            <VBox.margin>
+                                <Insets left="20.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Tw Cen MT Condensed Extra Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label />
+                        <Label fx:id="vittorieOspiti" prefHeight="17.0" prefWidth="493.0" text="Vittorie Ospiti   :   " textAlignment="CENTER">
+                            <VBox.margin>
+                                <Insets left="20.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Tw Cen MT Condensed Extra Bold" size="16.0" />
+                            </font>
+                        </Label>
+                        <Label />
+                        <Label fx:id="casaGoal" prefHeight="17.0" prefWidth="519.0" text="Casa goal segnati/subiti   :     ">
+                            <VBox.margin>
+                                <Insets left="20.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Tw Cen MT Condensed Extra Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label />
+                        <Label fx:id="ospitiGoal" prefHeight="17.0" prefWidth="496.0" text="Ospite Goal fatti/subiti   :   ">
+                            <VBox.margin>
+                                <Insets left="20.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Tw Cen MT Condensed Extra Bold" size="17.0" />
+                            </font>
+                        </Label>
+                        <Label />
+                    </children>
+                </VBox>
+                <VBox prefHeight="40.0" prefWidth="390.0" />
+                <VBox prefHeight="450.0" prefWidth="429.0" style="-fx-background-color: #D08770; -fx-background-radius: 5%;">
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" ellipsisString="\@" prefHeight="51.0" prefWidth="419.0" text="Scontri Precedenti:">
+                            <font>
+                                <Font name="Segoe UI Black" size="18.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="20.0" />
+                            </VBox.margin>
+                        </Label>
+                  <Label fx:id="scontro1" alignment="CENTER" ellipsisString="-" prefHeight="70.0" prefWidth="419.0" style="-fx-background-color: #A3BE8C; -fx-border-color: black; -fx-border-width: 3px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="3 : 2 Juventus / Inter" textAlignment="CENTER" visible="false">
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="10.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="scontro2" alignment="CENTER" ellipsisString="-" prefHeight="70.0" prefWidth="321.0" style="-fx-background-color: #A3BE8C; -fx-border-color: black; -fx-border-width: 3px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="3 : 2 Juventus / Inter" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="scontro3" alignment="CENTER" ellipsisString="-" prefHeight="70.0" prefWidth="419.0" style="-fx-background-color: #A3BE8C; -fx-border-color: black; -fx-border-width: 3px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="3 : 2 Juventus / Inter" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label fx:id="scontro4" alignment="CENTER" ellipsisString="-" prefHeight="70.0" prefWidth="419.0" style="-fx-background-color: #A3BE8C; -fx-border-color: black; -fx-border-width: 3px; -fx-border-radius: 5px; -fx-background-radius: 5px;" text="3 : 2 Juventus / Inter" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets left="50.0" right="50.0" top="15.0" />
+                     </VBox.margin>
+                  </Label>
+                    </children>
+               <padding>
+                  <Insets bottom="20.0" />
+               </padding>
+                </VBox>
+            </children>
+        </VBox>
+        <VBox alignment="CENTER" minWidth="700.0" prefHeight="1080.0" prefWidth="914.0" style="-fx-border-width: 2;">
+            <children>
+                <VBox alignment="CENTER" minHeight="311.0" minWidth="640.0" prefHeight="553.0" prefWidth="914.0" style="-fx-border-color: #4C566A; -fx-border-width: 5px; -fx-border-radius: 15px; -fx-background-color: #A3BE8C; -fx-background-radius: 15px;">
+                    <children>
+                        <MediaView fx:id="game" fitHeight="553.0" fitWidth="910.0">
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin></MediaView>
+                    </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+                </VBox>
+                <VBox prefHeight="78.0" prefWidth="914.0" style="-fx-background-color: #A3BE8C;">
+                    <effect>
+                        <InnerShadow choke="0.66" height="204.19" radius="99.7625" width="196.86">
+                            <color>
+                                <Color red="0.95686274766922" green="0.95686274766922" blue="0.95686274766922" />
+                            </color>
+                        </InnerShadow>
+                    </effect>
+                </VBox>
+                <VBox prefHeight="432.0" prefWidth="914.0">
+                    <children>
+                        <TabPane fx:id="scomemesse" accessibleRole="IMAGE_VIEW" blendMode="COLOR_DODGE" prefHeight="404.0" prefWidth="914.0" tabClosingPolicy="UNAVAILABLE">
+                            <tabs>
+                                <Tab text="Più giocate">
+                                    <content>
+                              <ScrollPane hbarPolicy="NEVER">
+                                 <content>
+                                              <VBox>
+                                                  <children>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="1005.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="1X2">
+                                                          <VBox.margin>
+                                                              <Insets right="10.0" top="30.0" />
+                                                          </VBox.margin>
+                                                          <font>
+                                                              <Font name="Tw Cen MT Condensed Extra Bold" size="32.0" />
+                                                          </font>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="54.0" prefWidth="911.0" spacing="50.0" style="-fx-background-color: #EBCB8B; -fx-background-radius: 10px;">
+                                                          <VBox.margin>
+                                                              <Insets bottom="15.0" right="10.0" />
+                                                          </VBox.margin>
+                                                          <children>
+                                                              <Button fx:id="piuGiocate1" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="1 : 2.50">
+                                                                  <font>
+                                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                                  </font>
+                                                                  <HBox.margin>
+                                                                      <Insets right="140.0" />
+                                                                  </HBox.margin>
+                                                              </Button>
+                                                              <Button fx:id="piuGiocate2" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="X : 2.80">
+                                                                  <font>
+                                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                                  </font>
+                                                   <HBox.margin>
+                                                      <Insets right="140.0" />
+                                                   </HBox.margin>
+                                                              </Button>
+                                                              <Button fx:id="piuGiocate3" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="2 : 2.50">
+                                                                  <font>
+                                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                                  </font>
+                                                   <HBox.margin>
+                                                      <Insets />
+                                                   </HBox.margin>
+                                                              </Button>
+                                                          </children>
+                                                      </HBox>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="994.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="DC">
+                                                          <font>
+                                                              <Font name="Tw Cen MT Condensed Extra Bold" size="32.0" />
+                                                          </font>
+                                                          <VBox.margin>
+                                                              <Insets top="30.0" />
+                                                          </VBox.margin>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="54.0" prefWidth="911.0" spacing="50.0" style="-fx-background-color: #EBCB8B; -fx-background-radius: 10px;">
+                                                          <children>
+                                                              <Button fx:id="piuGiocate4" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="1X : 1.40">
+                                                                  <font>
+                                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                                  </font>
+                                                                  <HBox.margin>
+                                                                      <Insets right="140.0" />
+                                                                  </HBox.margin>
+                                                              </Button>
+                                                              <Button fx:id="piuGiocate5" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="X2 : 1.40">
+                                                                  <font>
+                                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                                  </font>
+                                                   <HBox.margin>
+                                                      <Insets right="140.0" />
+                                                   </HBox.margin>
+                                                              </Button>
+                                                              <Button fx:id="piuGiocate6" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="12 : 1.55">
+                                                                  <font>
+                                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                                  </font>
+                                                              </Button>
+                                                          </children>
+                                                      </HBox>
+                                                      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="994.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="Goal / NoGoal">
+                                                          <font>
+                                                              <Font name="Tw Cen MT Condensed Extra Bold" size="32.0" />
+                                                          </font>
+                                                          <VBox.margin>
+                                                              <Insets top="30.0" />
+                                                          </VBox.margin>
+                                                      </Label>
+                                                      <HBox alignment="CENTER" prefHeight="54.0" prefWidth="911.0" spacing="50.0" style="-fx-background-color: #EBCB8B; -fx-background-radius: 10px;">
+                                                          <children>
+                                                              <Button fx:id="piuGiocate7" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="GOAL : 1.90">
+                                                                  <font>
+                                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                                  </font>
+                                                                  <HBox.margin>
+                                                                      <Insets right="180.0" />
+                                                                  </HBox.margin>
+                                                              </Button>
+                                                              <Button fx:id="piuGiocate8" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="NOGOAL : 1.90">
+                                                                  <font>
+                                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                                  </font>
+                                                              </Button>
+                                                          </children>
+                                                      </HBox>
+                                                  </children>
+                                              </VBox>
+                                 </content>
+                              </ScrollPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="MultiGoal">
+                                    <content>
+                              <ScrollPane hbarPolicy="NEVER">
+                                 <content>
+                                    <VBox>
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="1005.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="MultiGoal Casa">
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="30.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="Tw Cen MT Condensed Extra Bold" size="32.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="54.0" prefWidth="911.0" spacing="50.0" style="-fx-background-color: #EBCB8B; -fx-background-radius: 10px;">
+                                             <VBox.margin>
+                                                <Insets bottom="15.0" right="10.0" />
+                                             </VBox.margin>
+                                             <children>
+                                                <ComboBox fx:id="multiCasa" prefWidth="150.0" promptText="Seleziona Somma" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" />
+                                                <Button fx:id="multiGoal1" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="CONFERMA">
+                                                   <font>
+                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="994.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="MultiGoal Ospiti">
+                                             <font>
+                                                <Font name="Tw Cen MT Condensed Extra Bold" size="32.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="30.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="54.0" prefWidth="911.0" spacing="50.0" style="-fx-background-color: #EBCB8B; -fx-background-radius: 10px;">
+                                             <children>
+                                                <ComboBox fx:id="multiOspiti" depthTest="ENABLE" prefWidth="150.0" promptText="Seleziona Somma" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" />
+                                                <Button fx:id="multiGoal2" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="CONFERMA">
+                                                   <font>
+                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="994.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="MultiGoal tot">
+                                             <font>
+                                                <Font name="Tw Cen MT Condensed Extra Bold" size="32.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="30.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="54.0" prefWidth="911.0" spacing="50.0" style="-fx-background-color: #EBCB8B; -fx-background-radius: 10px;">
+                                             <children>
+                                                <ComboBox fx:id="multiTot" prefWidth="150.0" promptText="Seleziona Somma" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" />
+                                                <Button fx:id="multiGoal3" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="CONFERMA">
+                                                   <font>
+                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                                    </content>
+                                </Tab>
+                                <Tab text="Under / Over">
+                                    <content>
+                              <ScrollPane hbarPolicy="NEVER">
+                                 <content>
+                                              <VBox>
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="1005.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="Under / Over 1.5">
+                                             <VBox.margin>
+                                                <Insets right="10.0" top="30.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="Tw Cen MT Condensed Extra Bold" size="32.0" />
+                                             </font>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="54.0" prefWidth="911.0" spacing="50.0" style="-fx-background-color: #EBCB8B; -fx-background-radius: 10px;">
+                                             <children>
+                                                <Button fx:id="under1" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="UNDER 1.5 : 2.50">
+                                                   <font>
+                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="180.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="over1" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="OVER 1.5 : 1.50">
+                                                   <font>
+                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="994.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="Under / Over 2.5">
+                                             <font>
+                                                <Font name="Tw Cen MT Condensed Extra Bold" size="32.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="30.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="54.0" prefWidth="911.0" spacing="50.0" style="-fx-background-color: #EBCB8B; -fx-background-radius: 10px;">
+                                             <children>
+                                                <Button fx:id="under2" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="UNDER 2.5 : 1.90">
+                                                   <font>
+                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="180.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="over2" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="OVER 2.5 : 1.90">
+                                                   <font>
+                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="37.0" prefWidth="994.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="Under / Over 3.5">
+                                             <font>
+                                                <Font name="Tw Cen MT Condensed Extra Bold" size="32.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets top="30.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <HBox alignment="CENTER" prefHeight="54.0" prefWidth="911.0" spacing="50.0" style="-fx-background-color: #EBCB8B; -fx-background-radius: 10px;">
+                                             <children>
+                                                <Button fx:id="under3" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="UNDER 3.5 : 1.20">
+                                                   <font>
+                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="180.0" />
+                                                   </HBox.margin>
+                                                </Button>
+                                                <Button fx:id="over3" mnemonicParsing="false" onMouseClicked="#aggiungiScommessa" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="OVER 3.5 : 4.5">
+                                                   <font>
+                                                      <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <effect>
+                                <ColorAdjust brightness="-0.24" contrast="0.38" saturation="0.11" />
+                            </effect>
+                        </TabPane>
+                    </children>
+                </VBox>
+            </children>
+            <padding>
+                <Insets bottom="50.0" top="20.0" />
+            </padding>
+            <opaqueInsets>
+                <Insets bottom="20.0" />
+            </opaqueInsets>
+            <HBox.margin>
+                <Insets />
+            </HBox.margin>
+        </VBox>
+        <VBox alignment="TOP_CENTER" minWidth="370.0" prefHeight="900.0" prefWidth="507.0" style="-fx-background-color: #EBCB8B; -fx-background-radius: 0;">
+            <children>
+                <HBox alignment="CENTER" prefHeight="132.0" prefWidth="408.0">
+                    <children>
+                        <AnchorPane prefHeight="74.0" prefWidth="312.0" style="-fx-background-color: #D8DEE9; -fx-border-radius: 30px; -fx-border-color: #BF616A; -fx-background-radius: 30px; -fx-border-width: 10px;">
+                            <HBox.margin>
+                                <Insets bottom="15.0" left="30.0" right="5.0" top="15.0" />
+                            </HBox.margin>
+                            <padding>
+                                <Insets left="50.0" />
+                            </padding>
+                            <children>
+                                <Label alignment="CENTER_RIGHT" layoutX="117.0" layoutY="22.0" prefHeight="59.0" prefWidth="230.0" text="ALLAPROSSIMA PARTITA  " textAlignment="CENTER">
+                                    <font>
+                                        <Font name="Cooper Black" size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="timerPartita" layoutX="34.0" layoutY="19.0" prefHeight="59.0" prefWidth="65.0" text="60" textFill="#bf616a">
+                                    <font>
+                                        <Font name="Yu Gothic Bold" size="48.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </children>
+                </HBox>
+                <Label prefHeight="25.0" prefWidth="440.0" />
+                <HBox pickOnBounds="false" prefHeight="119.0" prefWidth="409.0" style="-fx-background-radius: 58px; -fx-background-color: #8FBCBB;">
+                    <children>
+                  <ImageView fx:id="immagineUtente" fitHeight="120.0" fitWidth="109.0">
+                     <image>
+                        <Image url="@../model/image/user.png" />
+                     </image>
+                  </ImageView>
+                        <Label fx:id="nomeUtente" prefHeight="41.0" prefWidth="120.0" text="L'INGEGNERE">
+                            <font>
+                                <Font name="Eras Bold ITC" size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0" top="20.0" />
+                            </HBox.margin>
+                        </Label>
+                        <Label fx:id="saldo" alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="105.0" text="100 " HBox.hgrow="NEVER">
+                            <font>
+                                <Font name="Eras Bold ITC" size="17.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets top="60.0" />
+                            </HBox.margin>
+                        </Label>
+                  <Label text="€">
+                     <font>
+                        <Font name="Eras Bold ITC" size="17.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="50.0" top="70.0" />
+                     </HBox.margin>
+                  </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="10.0" right="30.0" />
+                    </VBox.margin>
+                </HBox>
+                <Button fx:id="statistiche" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onMouseClicked="#visualizzaStatistiche" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #D08770; -fx-background-radius: 10px;" text="STATISTICHE">
+                    <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="20.0" top="30.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="ricarica" mnemonicParsing="false" onMouseDragged="#ricaricaProfilo" prefHeight="25.0" prefWidth="97.0" style="-fx-background-color: #D08770; -fx-background-radius: 10px;" text="RICARICA">
+                    <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets bottom="25.0" />
+                    </VBox.margin>
+                </Button>
+            <Button fx:id="login" mnemonicParsing="false" onMouseClicked="#loginPage" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #D08770; -fx-background-radius: 10px;" text="LOGIN">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="25.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="logout" alignment="CENTER" contentDisplay="TEXT_ONLY" mnemonicParsing="false" onMouseClicked="#logout" prefHeight="25.0" prefWidth="98.0" style="-fx-background-color: #D08770; -fx-background-radius: 10px;" text="LOGOUT">
+               <font>
+                  <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+               </font>
+            </Button>
+                <VBox alignment="BOTTOM_RIGHT" prefHeight="471.0" prefWidth="392.0" style="-fx-background-color: #D08770; -fx-background-radius: 30px;">
+                    <VBox.margin>
+                        <Insets bottom="20.0" left="30.0" right="30.0" top="40.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label contentDisplay="CENTER" graphicTextGap="9.0" prefHeight="101.0" prefWidth="439.0" text="    Riepilogo Schedina" textAlignment="CENTER" textFill="#8fbcbb">
+                            <font>
+                                <Font name="Poor Richard" size="37.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </Label>
+                  <Label fx:id="giocata" prefHeight="53.0" prefWidth="447.0" style="-fx-background-radius: 3px; -fx-background-color: #A3BE8C;" text="Enzo Masaneo" visible="false">
+                     <VBox.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="40.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="30.0" right="30.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font name="Tw Cen MT Condensed Extra Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="182.0" prefWidth="447.0" />
+                        <Pane prefHeight="39.0" prefWidth="392.0">
+                            <children>
+                                <Label prefHeight="35.0" prefWidth="110.0" text="  Importo ::" textOverrun="LEADING_ELLIPSIS">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="importo" alignment="CENTER" layoutX="100.0" layoutY="5.0" prefHeight="25.0" prefWidth="58.0" text="2">
+                           <font>
+                              <Font name="Gill Sans Ultra Bold Condensed" size="13.0" />
+                           </font>
+                        </TextField>
+                                <Label layoutX="158.0" prefHeight="35.0" prefWidth="28.0" text="  €">
+                                    <font>
+                                        <Font name="System Bold" size="14.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <Button fx:id="scommetti" mnemonicParsing="false" onMouseClicked="#scommetti" prefHeight="25.0" prefWidth="120.0" style="-fx-background-color: #A3BE8C; -fx-background-radius: 10px;" text="SCOMMETTI">
+                            <font>
+                                <Font name="Tw Cen MT Condensed Extra Bold" size="14.0" />
+                            </font>
+                            <VBox.margin>
+                                <Insets bottom="20.0" right="20.0" />
+                            </VBox.margin>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</HBox>

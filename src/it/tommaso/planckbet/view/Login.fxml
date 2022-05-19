@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tommaso.planckbet.controller.ControllerLogin">
+<content>
+   <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #D08770;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+      <children>
+         <Label prefHeight="73.0" prefWidth="598.0" text="Login Page">
+            <font>
+               <Font name="Tw Cen MT Condensed Extra Bold" size="41.0" />
+            </font>
+            <VBox.margin>
+               <Insets top="10.0" />
+            </VBox.margin>
+         </Label>
+         <Label alignment="CENTER" prefHeight="57.0" prefWidth="624.0" text="Username">
+            <font>
+               <Font name="Copperplate Gothic Bold" size="18.0" />
+            </font>
+         </Label>
+         <TextField fx:id="username" alignment="CENTER" prefHeight="30.0" prefWidth="300.0" promptText="Username" style="-fx-border-color: #BF616A; -fx-border-width: 4px; -fx-background-color: #EBCB8B;">
+            <VBox.margin>
+               <Insets left="150.0" right="150.0" />
+            </VBox.margin>
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+         </TextField>
+         <Label alignment="CENTER" prefHeight="61.0" prefWidth="640.0" text="Password">
+            <font>
+               <Font name="Copperplate Gothic Bold" size="17.0" />
+            </font>
+         </Label>
+         <PasswordField fx:id="password" alignment="CENTER" prefHeight="30.0" prefWidth="300.0" promptText="Password" style="-fx-border-color: #BF616A; -fx-border-width: 4px; -fx-background-color: #EBCB8B;">
+            <VBox.margin>
+               <Insets left="150.0" right="150.0" />
+            </VBox.margin>
+         </PasswordField>
+         <CheckBox fx:id="nuovo" contentDisplay="TOP" mnemonicParsing="false" prefHeight="81.0" prefWidth="475.0" style="-fx-background-color: ;" text="Nuovo Utente con queste informazioni">
+            <font>
+               <Font name="System Bold" size="13.0" />
+            </font>
+         </CheckBox>
+      </children>
+   </VBox>
+</content>
+
+</DialogPane>

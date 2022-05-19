@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<DialogPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.tommaso.planckbet.controller.ControllerRicarica">
+    <headerText>
+        Modulo di caricamento conto
+    </headerText>
+    <content>
+        <GridPane hgap="10" vgap="10">
+            <Label text="Importo" GridPane.rowIndex="1" />
+            <TextField fx:id="ricarica" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label GridPane.columnIndex="1" />
+            <columnConstraints>
+                <ColumnConstraints />
+                <ColumnConstraints />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+                <RowConstraints />
+            </rowConstraints>
+        </GridPane>
+    </content>
+</DialogPane>
